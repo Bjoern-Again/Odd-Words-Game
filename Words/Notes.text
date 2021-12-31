@@ -1,0 +1,137 @@
+Three words 
+
+Two similar or related the other odd one out
+identify the odd one out
+
+banana computer apple
+
+banana and apple are related
+
+computer is the odd one out
+
+
+What are the dynamics for this quiz?
+
+getting the words! either hard coded or preferbly through api
+getting the odd word will probably more difficult 
+
+
+select Word api 
+ - choses random word
+
+Related Word api
+ - word from previous api fetches related words
+ 
+Create array of related words
+ - randomly chose related word
+
+fn odd Word 
+ - chose 2nd random word
+
+--------------------------------------------------------------------------
+
+relWords = [];
+wordArray = [];
+oddWord;
+
+
+fn randomWord api
+ - fetches random word
+
+fn relatedWord api 
+ - fetches related words
+ - puts them into relWord array
+
+fn selectWord
+ - variable word
+ - call fn randomWord api store in word variable
+ - call fn relatedWord api
+ - return word // or push word into wordArray
+
+fn relatedWord 
+ - variable word (relatedWord)
+ - randomly pick word from relWords array
+ - return word // or push word into wordArray
+
+fn oddWord 
+ - word (oddWord)
+ - call fn randomWord store in word variable
+ - compare word agains relWords array
+ - if word equal word in relWords array 
+   - then call oddWord fn again
+   - think about recursion here
+ - return word // or push word into wordArray
+
+
+fn shuffle 
+ - stack overflow shuffle
+ - maype map the intial array functional programming 
+ - shuffles the array 
+
+
+fn display
+ - var shuffledArr = fn shuffle 
+ - 1. a tag innerHtml = shuffledArr[0];
+ - 2. a tag innerHtml = shuffledArr[1];
+ - 3. a tag innerHtml = shuffledArr[2]; 
+
+
+fn score 
+ - each item is compared to oodWord
+ - if oddWord is pressed button then score 
+ - else no score 
+ - 1. button/a tag innerHtml === oddWord - possible idea etc.
+
+fn timer
+ - use previous timers
+ - recreate without looking at solution 
+
+
+fn init 
+ - call fn selectWord
+ - call fn relatedWord
+ - call fn oddWord
+ - call display
+ - call timer (possibly frist fn that is called in init)
+
+
+
+1. a tag click event (run score system)
+2. a tag click event (run score system)
+3. a tag click event (run score system)
+
+
+
+ call fn init
+
+
+
+
+
+ ////////////////////////////////////////////////////////////////////////
+
+ stack overflow: 
+
+ array random shuffle
+
+ function shuffle(array) {
+  let currentIndex = array.length,  randomIndex;
+
+  // While there remain elements to shuffle...
+  while (currentIndex != 0) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
+
+
+///////////////////////////////////////////////////////////////////////////
+
