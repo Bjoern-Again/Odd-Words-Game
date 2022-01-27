@@ -7,7 +7,7 @@ be used as a tool to study the verbal reasoning part of the assessment.
 Brief explanation of the mechanics:
 - Uses a json file with the most common English words to find the initial word.
 - Word is used with word association api to get an additional word.
-- An unrelated word is chosen from the most common words array and compared to the previously words.
+- An unrelated word is chosen from the most common words array and compared to the previous associate words array.
 
 .......................................................................................................
 
