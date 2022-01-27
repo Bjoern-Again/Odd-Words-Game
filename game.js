@@ -10,7 +10,7 @@ const scoreCount = document.getElementById('counter');
 const loader = document.getElementById('loader');
 const game = document.getElementById('game');
 
-// imports word list with most common english words  
+// imports word list if the most common english words  
 const fetchCommonWords = async() => {
   const response = await fetch('words.json');
   const json = await response.json();
@@ -27,7 +27,6 @@ fetchCommonWords()
 .catch(error => {
   console.log('Fetch problem: ' + err.message);    
 });
-// creates word array 
 
 const GAME = {
   // Global variables 
@@ -35,21 +34,17 @@ const GAME = {
   arr: Array, 
   dataArr: Array,
   oddWord: String,
-  // set the  array from fetch and start the app be calling selectWord
+  
   init: function (wordArr) {
     this.arr = wordArr;
     this.selectWord();
   },
   selectWord: function() {
-    // the selected words array has to be empty for new selected words  
     if(this.selectedWords.length > 0) {
       this.selectedWords = [];
     }
-    // actual logic to select word 
     let word = this.arr[Math.floor(Math.random() * this.arr.length)];
-    // chosen word is pushed into empty selected words array 
     this.selectedWords.push(word);
-    // related word api is called with chosen word
     this.relatedWordApi(word);
   },
   // fn fetches related word from inital common chosen word
@@ -74,35 +69,31 @@ const GAME = {
         if(response.result_msg === "Entry word not found") {
           return this.selectWord();
         }
-        // associated words array is attached to global variable 
         this.dataArr = response.associations_array;
-        // when associated word array is recieved only then the random word function is called 
         this.randomSelectWord();	
       })
       .catch((err) => {
         console.error(err);
       });
     },
-  // selectes random associated word from dataArray and added to selected word list
   randomSelectWord: function() {
     let relatedWord = this.dataArr[Math.floor(Math.random() * this.dataArr.length)];
     this.selectedWords.push(relatedWord);
     this.unrelateWord();
   },
-  // finds unrelated word by choosing another word from words array 
+  // finds unrelated word by choosing another word from most common English words
   unrelateWord: function() {
     this.oddWord = this.arr[Math.floor(Math.random() * this.arr.length)];
-    // checks if word is not equal to all words from associated word array before being pushed into selected word array
+    // checks that words are not the same as the associated words
     if(this.dataArr.indexOf(this.oddWord) === -1) {
       this.selectedWords.push(this.oddWord)
     } else {
-      // if word equals associated word array then function is called again
+      // if common word than repeat
       this.unrelateWord();
     }
     //removes spinner/loader
     game.classList.remove('hidden');
     loader.classList.add('hidden')
-    // display all selected words 
     SHOW.display();
   }
   }
@@ -122,7 +113,6 @@ const GAME = {
       (this.isBtnTwo && btn2.innerHTML === oddWord) ? this.count++:
       (this.isBtnThree && btn3.innerHTML === oddWord) ? this.count++:
 
-      // all button are set  back to false to restart process
       this.isBtnOne = false;
       this.isBtnTwo = false;
       this.isBtnThree = false;
@@ -133,7 +123,6 @@ const GAME = {
   // Display word association buttons
   
   const SHOW = {
-    // creates a copy of array, shuffles the word positions, displays each word and count
     display: function() {
       let array = GAME.selectedWords.slice();
       let shuffledArr = shuffleWord(array); 
@@ -184,7 +173,7 @@ const GAME = {
     }  
   }
   
-  // each button represents a word, when pressed runs score function, resets words array and adds loader 
+  // each button represents 
   btn1.addEventListener('click', () => {
     game.classList.add('hidden');
     loader.classList.remove('hidden');
