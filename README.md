@@ -9,5 +9,9 @@ Brief explanation of the mechanics:
 - Word is used with word association api to get an additional word.
 - An unrelated word is chosen from the most common words array and compared to the previously words.
 
+.......................................................................................................
+
+Below I uploaded a gif, it shows what the game looks like and how it functions 
+
 
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/51863404/151415122-ec4a5f63-a2e9-4d5b-b7df-b732117bd43d.gif)
