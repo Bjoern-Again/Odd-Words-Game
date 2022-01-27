@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Odd Words</title>
+</head>
+<body>
+    <div class="game-frame">
+        <header>
+            <h1>Odd Word</h1>
+        </header>
+        <h2>High Score</h2>
+        <table>
+            <thead>
+                <tr>
+                  <th>Name</th>
+                  <th class="filler">distance</th>
+                  <th>Words</th>
+                </tr>
+            </thead>
+            <tbody id="scoreArray"></tbody>
+        </table>
+
+        <div class="flex-center flex-column">
+        <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Enter your Name..."
+            >
+
+            <button
+            type="submit"
+            class="btn"
+            id="savePlay"
+            onclick="SAVE.saveName()"
+            >Play</button>
+        </div>
+    </div>
+
+    <script src="front.js"></script>
+</body>
+</html>

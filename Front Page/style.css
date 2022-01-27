@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@1,300&display=swap');
+
+/* Document */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Game Frame */
+.game-frame {
+  border: 1px solid #fafafa;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5em;
+  background-color: rgb(195, 213, 236);
+}
+
+/* Headers */
+h1,
+h2 {
+  font-family: 'Source Serif 4', monospace;
+  text-align: center;
+  color: #4b5e7c;
+  padding: 10px;
+}
+
+/* Table */
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.filler {
+  visibility: hidden;
+}
+
+/* Container for Button and Input */
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+    
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  text-align: center;
+}
+/* Imput Field */
+
+::placeholder {
+  color: rgb(4, 4, 22);
+  font-size: 1em;
+}
+
+input {
+  margin-top: 1rem;
+}
+
+/* Buttons */
+.btn {
+  font-size: 1em;
+  padding: 2px ;
+  width: 8rem;
+  text-align: center;
+  border: 0.2rem solid #4b5e7c;
+  border-radius: 5px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #4b5e7c;
+  background-color: rgb(195, 213, 236);
+}
+
+.btn:hover {
+  cursor: default;
+  background-color: #cedcec;
+  color: #4b5e7c;
+  box-shadow: 0 0.4rem 1.4rem 0 rgba(144, 165, 187, 0.5);
+  transform: translateY(0.1em);
+  transition: transform 150ms;
+}
