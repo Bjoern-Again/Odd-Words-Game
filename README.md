@@ -8,5 +8,4 @@ Brief explanation of the mechanics:
 - Uses a json file with the most common English words to find the initial word.
 - Word is used with word association api to get an additional word.
 - An unrelated word is chosen from the most common words array and compared to the previously words.
-- When an odd word is chosen the correct word counter increases by one. 
 
