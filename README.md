@@ -9,3 +9,7 @@ Brief explanation of the mechanics:
 - Word is used with word association api to get an additional word.
 - An unrelated word is chosen from the most common words array and compared to the previously words.
 
+
+
+https://user-images.githubusercontent.com/51863404/151411840-665b8b91-0000-4cfc-a37e-573f8a9c160b.mp4
+
