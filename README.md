@@ -13,6 +13,3 @@ Brief explanation of the mechanics:
 
 
 
-https://user-images.githubusercontent.com/51863404/151412029-97705730-67db-4e1f-ac1b-fd9babb8499e.mp4
-
-
