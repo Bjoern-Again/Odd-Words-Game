@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Odd Words Game</title>   
+</head>
+<body>
+  <div class="game-frame">
+    <div id="loader" class="hidden" style="--b: 20px;--c:#4b5e7c;width:80px;--n:15;--g:7deg"></div>
+      <div id="game">
+        <div class="clock-container">
+          <p class="clock"></p>
+        </div>
+
+        <div class="btn-container">
+          <button class="btn" id="btn-one">Word</button>
+          <button class="btn" id="btn-two">Word</button>
+          <button class="btn" id="btn-three">Word</button>
+        </div>
+
+        <div class="score">
+          <p>Correct Words: <span id='counter'></span></p>
+        </div>
+      </div>
+  </div>
+    <script type="module" src="game.js"></script>
+</body>
+</html>
