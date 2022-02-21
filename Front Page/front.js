@@ -16,8 +16,8 @@ const SAVE = {
     location.href = "../index.html"
   },
   saveScore: function() {
-
-      if(storedScore === null) {
+      if(storedScore && storedName === null || storedScore === null) {
+        localStorage.removeItem('scoreCount')
         return;
       }
       score = {
