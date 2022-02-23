@@ -41,7 +41,7 @@ const SAVE = {
           <td></td>
           <td class="text">${score.scoreCount}
       `
-    })
+    }).join('');
   }
 }
 
